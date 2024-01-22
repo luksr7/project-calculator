@@ -22,27 +22,6 @@ larng = '#FFAB40'
 
 
 #===========================================================================================================
-def calculadoraPROG():
-    while True:
-        try:
-            n1 = float(input("Digite o primeiro número: "))
-            n2 = float(input("Digite o segundo número: "))
-            operador = input("Digite o operador: ")
-
-            if operador in ('+', '-', '', '/'):
-                resultado = eval(f"{n1} {operador} {n2}")
-                if operador == '/' and n2 == 0:
-                    raise ZeroDivisionError("Erro: Divisão por zero não é permitida.")
-                print(f"O resultado da operação é: {resultado}")
-            else:
-                raise ValueError("Operador inválido. Por favor, use '+', '-', '' ou '/'.")
-
-            continuar = input("Deseja fazer outra operação? (S/N): ").lower()
-            if continuar != 's':
-                break
-
-        except Exception as e:
-            print(f"Erro: {e}. Por favor, tente novamente.")
 
 
 def calcular():
